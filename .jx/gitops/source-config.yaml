@@ -9,6 +9,7 @@ spec:
     providerKind: github
     repositories:
     - name: Node-Http-Jx-Example
+    - name: jx3-minicube
     scheduler: in-repo
   slack:
     channel: '#jenkins-x-pipelines'
