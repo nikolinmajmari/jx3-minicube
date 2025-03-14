@@ -92,7 +92,7 @@ service:
   externalPort: 80
   internalPort: 8080
   labels: {}
-  name: REPLACE_ME_APP_NAME
+  name: node-http-jx-example
   type: ClusterIP
 serviceAccount:
   annotations: {}
