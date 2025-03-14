@@ -7,6 +7,7 @@ data:
       LinkURL: null
     in_repo_config:
       enabled:
+        nikolinmajmari/Node-Http-Jx-Example: true
         nikolinmajmari/jx3-minicube: true
     plank: {}
     pod_namespace: jx
@@ -19,6 +20,7 @@ data:
         required-if-present-contexts: null
         skip-unknown-contexts: false
       merge_method:
+        nikolinmajmari/Node-Http-Jx-Example: merge
         nikolinmajmari/jx3-minicube: merge
       queries:
       - labels:
@@ -31,6 +33,7 @@ data:
         - needs-rebase
         repos:
         - nikolinmajmari/jx3-minicube
+        - nikolinmajmari/Node-Http-Jx-Example
       - labels:
         - updatebot
         missingLabels:
@@ -41,6 +44,7 @@ data:
         - needs-rebase
         repos:
         - nikolinmajmari/jx3-minicube
+        - nikolinmajmari/Node-Http-Jx-Example
       target_url: http://lighthouse-jx.192.168.49.2.nip.io/merge/status
 kind: ConfigMap
 metadata:

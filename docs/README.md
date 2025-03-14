@@ -65,6 +65,16 @@
 	      <td><a href='https://github.com/jenkins-x-plugins/jx-build-controller'>0</a> <a href='https://github.com/jenkins-x-plugins/jx-build-controller.git'>1</a> </td>
 	    </tr>
     <tr>
+		      <td colspan='5'><h3>postgres</h3></td>
+		    </tr>
+	    <tr>
+	      <td>postgres-operator</td>
+	      <td title='Postgres Operator creates and manages PostgreSQL clusters running in Kubernetes'><a href='https://github.com/zalando/postgres-operator'> postgres-operator</a></td>
+	      <td>1.6.2</td>
+	      <td></td>
+	      <td><a href='https://github.com/zalando/postgres-operator'>source</a></td>
+	    </tr>
+    <tr>
 		      <td colspan='5'><h3>tekton-pipelines</h3></td>
 		    </tr>
 	    <tr>

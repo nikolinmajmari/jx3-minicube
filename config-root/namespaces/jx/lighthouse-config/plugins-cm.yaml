@@ -6,6 +6,14 @@ data:
       repos:
       - nikolinmajmari/jx3-minicube
       require_self_approval: true
+    - lgtm_acts_as_approve: true
+      repos:
+      - nikolinmajmari/jx3-minicube
+      require_self_approval: true
+    - lgtm_acts_as_approve: true
+      repos:
+      - nikolinmajmari/Node-Http-Jx-Example
+      require_self_approval: true
     cat: {}
     cherry_pick_unapproved: {}
     config_updater:
@@ -16,6 +24,11 @@ data:
         env/prow/plugins.yaml:
           name: plugins
     external_plugins:
+      nikolinmajmari/Node-Http-Jx-Example:
+      - endpoint: http://cd-indicators.jx.svc.cluster.local/lighthouse/events
+        name: cd-indicators
+      - endpoint: http://lighthouse-webui-plugin.jx.svc.cluster.local/lighthouse/events
+        name: lighthouse-webui-plugin
       nikolinmajmari/jx3-minicube:
       - endpoint: http://cd-indicators.jx.svc.cluster.local/lighthouse/events
         name: cd-indicators
@@ -25,6 +38,20 @@ data:
       additional_labels: null
     owners: {}
     plugins:
+      nikolinmajmari/Node-Http-Jx-Example:
+      - approve
+      - assign
+      - help
+      - hold
+      - lgtm
+      - lifecycle
+      - override
+      - size
+      - trigger
+      - wip
+      - cat
+      - dog
+      - pony
       nikolinmajmari/jx3-minicube:
       - config-updater
       - approve
@@ -52,6 +79,14 @@ data:
     - repos:
       - nikolinmajmari/jx3-minicube
       trusted_org: nikolinmajmari
+    - repos:
+      - nikolinmajmari/jx3-minicube
+      trusted_org: nikolinmajmari
+    - repos:
+      - nikolinmajmari/Node-Http-Jx-Example
+      trusted_org: nikolinmajmari
+    welcome:
+    - message_template: Welcome
 kind: ConfigMap
 metadata:
   creationTimestamp: null

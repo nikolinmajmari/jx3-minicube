@@ -1,4 +1,8 @@
 filepath: ""
+environments:
+  default:
+    values:
+    - jx-values.yaml
 namespace: postgres
 repositories:
 - name: commonground
@@ -7,5 +11,7 @@ releases:
 - chart: commonground/postgres-operator
   version: 1.6.2
   name: postgres-operator
+  values:
+  - jx-values.yaml
 templates: {}
 renderedvalues: {}
