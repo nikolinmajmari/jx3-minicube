@@ -1,0 +1,11 @@
+filepath: ""
+namespace: postgres
+repositories:
+- name: commonground
+  url: https://charts.commonground.nl/
+releases:
+- chart: commonground/postgres-operator
+  version: 1.6.2
+  name: postgres-operator
+templates: {}
+renderedvalues: {}
