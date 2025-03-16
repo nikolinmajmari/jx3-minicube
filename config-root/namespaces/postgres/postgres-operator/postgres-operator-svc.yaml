@@ -1,0 +1,24 @@
+# Source: postgres-operator/templates/service.yaml
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    app.kubernetes.io/name: postgres-operator
+    helm.sh/chart: postgres-operator-1.6.2
+    app.kubernetes.io/managed-by: Helm
+    app.kubernetes.io/instance: postgres-operator
+    gitops.jenkins-x.io/pipeline: 'namespaces'
+  name: postgres-operator
+  annotations:
+    meta.helm.sh/release-name: 'postgres-operator'
+    meta.helm.sh/release-namespace: 'postgres'
+  namespace: postgres
+spec:
+  type: ClusterIP
+  ports:
+  - port: 8080
+    protocol: TCP
+    targetPort: 8080
+  selector:
+    app.kubernetes.io/instance: postgres-operator
+    app.kubernetes.io/name: postgres-operator

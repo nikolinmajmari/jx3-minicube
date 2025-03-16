@@ -40,7 +40,7 @@ jxRequirements:
   ingress:
     domain: 192.168.49.2.nip.io
     kind: ingress
-    namespaceSubDomain: -tekton-pipelines.
+    namespaceSubDomain: -postgres.
     tls:
       email: ""
       enabled: false

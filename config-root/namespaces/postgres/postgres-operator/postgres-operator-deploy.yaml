@@ -1,0 +1,53 @@
+# Source: postgres-operator/templates/deployment.yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app.kubernetes.io/name: postgres-operator
+    helm.sh/chart: postgres-operator-1.6.2
+    app.kubernetes.io/managed-by: Helm
+    app.kubernetes.io/instance: postgres-operator
+    gitops.jenkins-x.io/pipeline: 'namespaces'
+  name: postgres-operator
+  annotations:
+    meta.helm.sh/release-name: 'postgres-operator'
+    meta.helm.sh/release-namespace: 'postgres'
+    wave.pusher.com/update-on-config-change: 'true'
+  namespace: postgres
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app.kubernetes.io/name: postgres-operator
+      app.kubernetes.io/instance: postgres-operator
+  template:
+    metadata:
+      annotations:
+        checksum/config: 87ec91260d6049dfd0b29647cbdf9cd1555e9da1750dbcc9937d9c8f483a033c
+      labels:
+        app.kubernetes.io/name: postgres-operator
+        app.kubernetes.io/instance: postgres-operator
+    spec:
+      serviceAccountName: postgres-operator
+      containers:
+      - name: postgres-operator
+        image: "registry.opensource.zalan.do/acid/postgres-operator:v1.6.2"
+        imagePullPolicy: IfNotPresent
+        env:
+        - name: CONFIG_MAP_NAME
+          value: postgres-operator
+        resources:
+          limits:
+            cpu: 500m
+            memory: 500Mi
+          requests:
+            cpu: 100m
+            memory: 250Mi
+        securityContext:
+          allowPrivilegeEscalation: false
+          readOnlyRootFilesystem: true
+          runAsNonRoot: true
+          runAsUser: 1000
+      affinity: {}
+      nodeSelector: {}
+      tolerations: []
