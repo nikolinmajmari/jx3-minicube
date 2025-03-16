@@ -14,7 +14,7 @@ spec:
     gitName: github
     gitServer: https://github.com
     provider: minikube
-    registry: 10.102.100.143
+    registry: 10.102.87.140
   environments:
   - key: dev
     owner: nikolinmajmari
