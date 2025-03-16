@@ -7,6 +7,7 @@ data:
       LinkURL: null
     in_repo_config:
       enabled:
+        nikolinmajmari/Golang-Http-Jenkin-X: true
         nikolinmajmari/Node-Http-Jx-Example: true
         nikolinmajmari/jx3-minicube: true
     plank: {}
@@ -20,6 +21,7 @@ data:
         required-if-present-contexts: null
         skip-unknown-contexts: false
       merge_method:
+        nikolinmajmari/Golang-Http-Jenkin-X: merge
         nikolinmajmari/Node-Http-Jx-Example: merge
         nikolinmajmari/jx3-minicube: merge
       queries:
@@ -33,6 +35,7 @@ data:
         - needs-rebase
         repos:
         - nikolinmajmari/jx3-minicube
+        - nikolinmajmari/Golang-Http-Jenkin-X
         - nikolinmajmari/Node-Http-Jx-Example
       - labels:
         - updatebot
@@ -44,6 +47,7 @@ data:
         - needs-rebase
         repos:
         - nikolinmajmari/jx3-minicube
+        - nikolinmajmari/Golang-Http-Jenkin-X
         - nikolinmajmari/Node-Http-Jx-Example
       target_url: http://lighthouse-jx.192.168.49.2.nip.io/merge/status
 kind: ConfigMap

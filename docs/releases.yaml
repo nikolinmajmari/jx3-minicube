@@ -11,7 +11,7 @@
     - name: bucketrepo
       url: http://bucketrepo-jx.192.168.49.2.nip.io
     - name: hook
-      url: http://89e9-141-98-140-232.ngrok-free.app/hook
+      url: http://f859-79-106-33-75.ngrok-free.app/hook
     lastDeployed: "2025-03-14T05:26:45Z"
     name: jxboot-helmfile-resources
     releaseName: jxboot-helmfile-resources
@@ -91,7 +91,7 @@
     ingresses:
     - name: docker-registry
       url: http://docker-registry-jx.192.168.49.2.nip.io/
-    lastDeployed: "2025-03-16T05:38:11Z"
+    lastDeployed: "2025-03-16T06:09:10Z"
     maintainers:
     - email: devin@canterberry.cc
       name: Devin Canterberry
