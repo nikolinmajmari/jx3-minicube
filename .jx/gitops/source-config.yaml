@@ -10,6 +10,7 @@ spec:
     repositories:
     - name: Golang-Http-Jenkin-X
     - name: Node-Http-Jx-Example
+    - name: golang-http-jenkin-x-v2
     - name: jx3-minicube
     scheduler: in-repo
   slack:
