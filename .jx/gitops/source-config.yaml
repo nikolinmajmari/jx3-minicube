@@ -8,6 +8,7 @@ spec:
     provider: https://github.com
     providerKind: github
     repositories:
+    - name: Golang-Http-Jenkin-X
     - name: Node-Http-Jx-Example
     - name: jx3-minicube
     scheduler: in-repo
